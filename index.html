@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Cards with Modals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Card 1 -->
+    <div class="card" data-modal="modal1.html">
+        <h2>Title 1</h2>
+        <p>Description for card 1</p>
+        <img src="image1.jpg" alt="Image 1">
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card" data-modal="modal2.html">
+        <h2>Title 2</h2>
+        <p>Description for card 2</p>
+        <img src="image2.jpg" alt="Image 2">
+    </div>
+
+
+     <!-- Card 3 -->
+     <div class="card" data-modal="modal3.html">
+        <h2>Title 3</h2>
+        <p>Description for card 3</p>
+        <img src="image3.jpg" alt="Image 2">
+    </div>
+
+
+     <!-- Card 4 -->
+     <div class="card" data-modal="modal4.html">
+        <h2>Title 4</h2>
+        <p>Description for card 4</p>
+        <img src="image4.jpg" alt="Image 4">
+    </div>
+    
+    <!-- Add more cards as needed -->
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
