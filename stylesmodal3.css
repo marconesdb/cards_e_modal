@@ -1,20 +1,75 @@
+/* Estilos globais */
 body {
-    text-align: center; /* Centraliza todo o conteúdo dentro do body */
+    text-align: center; /* Centraliza o conteúdo dentro do body */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
 }
 
-.img{
-    width: 560px;
-    margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+.content {
+    padding: 20px;
 }
 
-h2, p, img, iframe {
-    margin: 20px auto; /* Adiciona espaçamento em todas as direções */
+/* Estilos para imagem e vídeo */
+.img {
+    width: 100%;
+    max-width: 560px;
+    margin: 20px auto; /* Centraliza e adiciona espaçamento */
     display: block; /* Garante que cada elemento ocupe toda a largura disponível */
 }
 
+.iframe {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16/9; /* Mantém a proporção de aspecto */
+    margin: 20px auto; /* Centraliza e adiciona espaçamento */
+    display: block; /* Garante que cada elemento ocupe toda a largura disponível */
+}
 
-p{
-    width: 1000px;
+/* Estilos para o texto */
+h2, p {
+    margin: 20px auto; /* Centraliza e adiciona espaçamento */
+    max-width: 1000px; /* Limita a largura máxima do texto */
+}
+
+p {
     text-align: justify; /* Justifica o texto */
- 
+    background-color: #fff;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+
+/* Telas grandes (desktop e notebook) */
+@media screen and (min-width: 1200px) {
+    .content {
+        max-width: 1200px; /* Limita a largura máxima do conteúdo */
+        margin: 0 auto; /* Centraliza o conteúdo */
+    }
+}
+
+/* Telas médias (tablets) */
+@media screen and (max-width: 768px) {
+    .img, .iframe {
+        width: 80%; /* Ajusta a largura para telas menores */
+    }
+
+    h2, p {
+        width: 90%; /* Ajusta a largura do texto para telas menores */
+    }
+}
+
+/* Telas pequenas (celulares) */
+@media screen and (max-width: 480px) {
+    .img, .iframe {
+        width: 100%; /* Ajusta a largura para telas menores */
+    }
+
+    h2, p {
+        width: 100%; /* Ajusta a largura do texto para telas menores */
+    }
 }
