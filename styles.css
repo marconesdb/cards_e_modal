@@ -68,7 +68,7 @@ body.no-scroll {
 @media screen and (max-width: 400px) {
     .card-container {
         grid-template-columns: 1fr; /* Cria 1 coluna para os cards */
-        margin-top: 880px;
+        margin-top: 850px;
         
     }
     
