@@ -58,14 +58,14 @@ body.no-scroll {
 }
 
 /* Media Queries para responsividade */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 700px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas para os cards */
         
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 400px) {
     .card-container {
         grid-template-columns: 1fr; /* Cria 1 coluna para os cards */
         margin-top: 812px;
