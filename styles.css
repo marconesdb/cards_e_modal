@@ -10,6 +10,7 @@ body {
     align-items: center;
     height: 100vh; /* Altura total da viewport */
     background-color: #aaa;
+    position: relative; /* Adicionado para evitar mudanças inesperadas de posição */
 }
 
 body.no-scroll {
@@ -43,7 +44,8 @@ body.no-scroll {
     transition: transform 0.3s ease;
     cursor: pointer;
     width: 100%; /* Ocupa toda a largura da coluna */
-    padding-top: 20px;
+    padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não altere a largura total */
     text-align: center;
 }
 
@@ -59,15 +61,17 @@ body.no-scroll {
 @media screen and (max-width: 992px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas para os cards */
+        
     }
 }
 
 @media screen and (max-width: 576px) {
     .card-container {
         grid-template-columns: 1fr; /* Cria 1 coluna para os cards */
-        margin-top: 720px;
+        margin-top: 812px;
     }
-
+    
+    
 }
 
 /* Estilos para a modal */
@@ -109,8 +113,8 @@ body.no-scroll {
     cursor: pointer;
 }
 
-
-p.button {
+/* Estilos para o botão */
+.button {
     display: inline-block;
     padding: 10px 20px; /* Adiciona preenchimento interno */
     background-color: #007bff; /* Cor de fundo do botão */
@@ -119,8 +123,13 @@ p.button {
     border-radius: 5px; /* Adiciona bordas arredondadas */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     text-decoration: none; /* Remove o sublinhado padrão */
+    max-width: 100%; /* Garante que o botão não exceda a largura do card */
+    white-space: nowrap; /* Impede a quebra de linha dentro do botão */
+    overflow: hidden; /* Esconde o conteúdo que extravasa */
+    text-overflow: ellipsis; /* Adiciona reticências ao conteúdo extravasado */
+    margin-bottom: 20px;
 }
 
-p.button:hover {
+.button:hover {
     background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
 }
