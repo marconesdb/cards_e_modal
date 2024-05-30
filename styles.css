@@ -1,136 +1,64 @@
-/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Altura total da viewport */
-    background-color: #aaa;
-    position: relative; /* Adicionado para evitar mudanças inesperadas de posição */
-}
-
-body.no-scroll {
-    overflow: hidden;
-}
-
-/* Container centralizado */
-.container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    width: 100%;
-}
-
-/* Container para os cards */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas para os cards */
-    gap: 40px; /* Espaçamento uniforme de 40px */
-    width: 100%; /* Largura do container */
-    max-width: 1200px; /* Largura máxima do container */
-    padding: 20px; /* Adiciona padding interno */
-    box-sizing: border-box; /* Garante que o padding não altere a largura total */
-}
-
-/* Estilos para os cards */
-.card {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    width: 100%; /* Ocupa toda a largura da coluna */
-    padding: 20px;
-    box-sizing: border-box; /* Garante que o padding não altere a largura total */
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.icone-card {
-    width: 40px; /* Diminuir tamanho dos ícones */
-}
-
-/* Media Queries para responsividade */
-@media screen and (max-width: 700px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas para os cards */
-        
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .card-container {
-        grid-template-columns: 1fr; /* Cria 1 coluna para os cards */
-        margin-top: 890px;
-        
-    }
-    
-    
-}
-
-/* Estilos para a modal */
-.modal {
+  *{
+    font-family: "Poppins", "Arial", "sans-serif";
+   }
+   /* Estilos personalizados para o modal */
+   .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #4d4c4c27;
+    z-index: 9999;
+    font-family: "Poppins";
+
 }
 
 .modal-content {
-    background-color: #1a1a1a;
-    color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 100%;
-    max-width: 1200px;
-    border-radius: 10px;
     position: relative;
+    margin: auto;
+    background-color: #4d4c4c;
+    padding: 0px;
+    border-radius: 8px;
+    max-width: 1200px; /* Largura máxima */
+    max-height: 100%;
+    overflow-y: auto;
+   
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.icone-card{
+    width: 130px;
+    
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+@media (min-width: 640px) { /* sm */
+    .modal-content {
+        width: 80%; /* Reduzindo a largura em telas pequenas */
+    }
 }
 
-/* Estilos para o botão */
-.button {
-    display: inline-block;
-    padding: 10px 20px; /* Adiciona preenchimento interno */
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    max-width: 100%; /* Garante que o botão não exceda a largura do card */
-    white-space: nowrap; /* Impede a quebra de linha dentro do botão */
-    overflow: hidden; /* Esconde o conteúdo que extravasa */
-    text-overflow: ellipsis; /* Adiciona reticências ao conteúdo extravasado */
-    margin-bottom: 20px;
+@media (min-width: 768px) { /* md */
+    .modal-content {
+        width: 70%; /* Reduzindo ainda mais a largura em telas médias */
+    }
 }
 
-.button:hover {
-    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+@media (min-width: 1024px) { /* lg */
+    .modal-content {
+        width: 50%; /* Reduzindo a largura em telas grandes */
+    }
+}
+
+@media (min-width: 1280px) { /* xl */
+    .modal-content {
+        width: 60%; /* Ajustando a largura em telas extra grandes */
+    }
+}
+
+@media (min-width: 1536px) { /* 2xl */
+    .modal-content {
+        width: 70%; /* Ajustando a largura em telas 2xl */
+    }
 }
