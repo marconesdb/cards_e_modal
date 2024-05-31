@@ -2,6 +2,12 @@
   *{
     font-family: "Poppins", "Arial", "sans-serif";
    }
+
+   .text-titulo{
+    background-color: #4d4c4c;
+    border-radius: 5px;
+    color: #fff;
+   }
    /* Estilos personalizados para o modal */
    .modal {
     display: none;
@@ -13,6 +19,7 @@
     background-color: #4d4c4c27;
     z-index: 9999;
     font-family: "Poppins";
+    color: #fff;
 
 }
 
