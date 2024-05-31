@@ -33,6 +33,30 @@
     
 }
 
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+}
+
+a.button:focus {
+    outline: none; /* Remove a borda ao focar */
+}
+
+a.button:active {
+    transform: translateY(1px); /* Adiciona um leve efeito de clique */
+}
+
+
 @media (min-width: 640px) { /* sm */
     .modal-content {
         width: 80%; /* Reduzindo a largura em telas pequenas */

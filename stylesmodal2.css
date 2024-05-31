@@ -1,4 +1,5 @@
 /* Estilos globais */
+
 body {
     text-align: center; /* Centraliza o conteúdo dentro do body */
     margin: 0;
@@ -19,6 +20,10 @@ body {
     display: block; /* Garante que cada elemento ocupe toda a largura disponível */
 }
 
+.img-icone-modal{
+    width: 300px;
+}
+
 .iframe {
     width: 100%;
     max-width: 560px;
@@ -32,6 +37,15 @@ body {
 h2, p {
     margin: 20px auto; /* Centraliza e adiciona espaçamento */
     max-width: 1000px; /* Limita a largura máxima do texto */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+h2{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 p {
@@ -43,33 +57,38 @@ p {
 }
 
 /* Media Queries para diferentes tamanhos de tela */
-
-/* Telas grandes (desktop e notebook) */
-@media screen and (min-width: 1200px) {
+/* Telas médias (576px) */
+@media screen and (max-width: 400px) {
     .content {
-        max-width: 1200px; /* Limita a largura máxima do conteúdo */
+        padding: 10px; /* Adiciona algum espaço interno para evitar que o conteúdo fique muito próximo das bordas */
+    }
+
+    .img, .iframe {
+        width: 100%; /* Ajusta a largura para telas médias */
+        max-width: none; /* Remove a largura máxima definida anteriormente */
+    }
+
+    h2, p {
+        width: 100%; /* Ajusta a largura do texto para telas médias */
+        max-width: none; /* Remove a largura máxima definida anteriormente */
+    }
+}
+
+/* Telas grandes (992px) */
+@media screen and (max-width: 992px) {
+    .content {
+        max-width: 992px; /* Limita a largura máxima do conteúdo para telas grandes */
+        padding: 20px; /* Adiciona algum espaço interno */
         margin: 0 auto; /* Centraliza o conteúdo */
     }
-}
 
-/* Telas médias (tablets) */
-@media screen and (max-width: 768px) {
     .img, .iframe {
-        width: 80%; /* Ajusta a largura para telas menores */
+        width: 100%; /* Ajusta a largura para telas grandes */
+        max-width: 100%; /* Define a largura máxima como 100% */
     }
 
     h2, p {
-        width: 90%; /* Ajusta a largura do texto para telas menores */
-    }
-}
-
-/* Telas pequenas (celulares) */
-@media screen and (max-width: 480px) {
-    .img, .iframe {
-        width: 100%; /* Ajusta a largura para telas menores */
-    }
-
-    h2, p {
-        width: 100%; /* Ajusta a largura do texto para telas menores */
+        width: 100%; /* Ajusta a largura do texto para telas grandes */
+        max-width: 100%; /* Define a largura máxima como 100% */
     }
 }
