@@ -57,6 +57,9 @@ p {
     border-radius: 10px;
 }
 
+.botao-play{
+    width: 20px;
+}
 /* Media Queries para diferentes tamanhos de tela */
 /* Telas médias (576px) */
 @media screen and (max-width: 400px) {
