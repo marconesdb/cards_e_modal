@@ -68,6 +68,7 @@ a.button {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 a.button:hover {
